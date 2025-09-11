@@ -1,0 +1,50 @@
+<objects>
+    <place x="75" y="150" n="0" value="1" name="Ген1"/>
+    <place x="300" y="150" n="1" value="0" name="p2"/>
+    <place x="550" y="150" n="2" value="0" name="p3"/>
+    <place x="800" y="150" n="3" value="0" name="p4"/>
+    <place x="1100" y="150" n="4" value="0" name="p5"/>
+    <transition x="175" y="150" distr="2" priority="0" n="0" name="t1">
+        <distr_options m="10" sigma="5"/>
+    </transition>
+    <arc-tp place="1" x="225" y="150" transition="0" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-tp place="0" x="125" y="75" transition="0" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-pt place="0" x="125" y="150" transition="0" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <transition x="425" y="150" distr="2" priority="0" n="1" name="t2">
+        <distr_options m="8" sigma="2"/>
+    </transition>
+    <arc-tp place="2" x="475" y="150" transition="1" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-pt place="1" x="375" y="150" transition="1" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <transition x="675" y="150" distr="0" priority="0" n="2" name="t3">
+        <distr_options value="6"/>
+    </transition>
+    <arc-tp place="3" x="725" y="150" transition="2" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-pt place="2" x="600" y="150" transition="2" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <transition x="950" y="150" distr="1" priority="0" n="3" name="t4">
+        <distr_options min="3" max="7"/>
+    </transition>
+    <arc-tp place="4" x="1025" y="150" transition="3" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-pt place="3" x="875" y="150" transition="3" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+</objects>
+<format_version major="1" minor="2"/>
+<global_options>
+    <transitions nonHolding="0"/>
+</global_options>

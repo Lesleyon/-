@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int main() {
+	setlocale(LC_ALL, "ru");
+	int size;
+	cout << "Введите размер массива: ";
+	cin >> size;
+		if (!size) {
+		cout << "Ошибка ввода!" << endl;
+		return 0;
+		}
+		const int n = 10; // кол-во элементов в массиве
+		int A[n];
+		cout << "Не отсортированный массив: ";
+		for (int i = 0; i < n; i++)
+		{
+			A[i] = rand() % size - rand() % size;
+		}
+		for (int i = 0; i < n; i++)
+		{
+			cout << A[i] << " ";
+		}
+		cout << endl;
+		cout << "Отсортированный массив: "; // сортировка методом простого выбора
+		for (int i = 0; i < n - 1; i++) {
+			int minj = i;
+			for (int j = i + 1; j < n; j++)
+				if (A[j] < A[minj])
+					minj = j;
+			swap(A[i], A[minj]);
+		}
+		for (int i = 0; i < n; i++) {
+			cout << A[i] << " ";
+		}
+	return 0;
+}

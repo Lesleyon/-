@@ -1,0 +1,55 @@
+<objects>
+    <place x="875" y="275" n="0" value="0" name="p12"/>
+    <place x="300" y="275" n="1" value="0" name="Стол Декана"/>
+    <place x="100" y="275" n="2" value="1" name="Студенты"/>
+    <place x="600" y="275" n="3" value="0" name="Стол сотрудника"/>
+    <place x="675" y="175" n="4" value="100" name="p15"/>
+    <place x="875" y="275" n="5" value="0" name="Ушедшие"/>
+    <place x="475" y="175" n="6" value="0" name="p14"/>
+    <transition x="450" y="275" distr="2" priority="0" n="0" name="Направление от Декана">
+        <distr_options m="2" sigma="1"/>
+    </transition>
+    <arc-tp place="3" x="500" y="275" transition="0" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-pt place="1" x="400" y="275" transition="0" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <transition x="575" y="175" distr="2" priority="0" n="1" name="Зарядка телефона">
+        <distr_options m="100" sigma="15"/>
+    </transition>
+    <arc-tp place="4" x="625" y="175" transition="1" distr="0" block="10" block_type="2">
+        <distr_options value="90"/>
+    </arc-tp>
+    <arc-tp place="6" x="525" y="175" transition="1" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <transition x="200" y="275" distr="2" priority="0" n="2" name="Приход в деканат">
+        <distr_options m="120" sigma="20"/>
+    </transition>
+    <arc-tp place="1" x="250" y="275" transition="2" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-tp place="2" x="150" y="225" transition="2" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-pt place="2" x="150" y="275" transition="2" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <transition x="725" y="275" distr="1" priority="0" n="3" name="Звонок Преподователю">
+        <distr_options min="5" max="10"/>
+    </transition>
+    <arc-tp place="5" x="800" y="275" transition="3" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-pt place="4" x="725" y="175" transition="3" distr="2" block="0" block_type="0">
+        <distr_options m="2" sigma="3"/>
+    </arc-pt>
+    <arc-pt place="3" x="650" y="275" transition="3" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+</objects>
+<format_version major="1" minor="2"/>
+<global_options>
+    <transitions nonHolding="0"/>
+</global_options>

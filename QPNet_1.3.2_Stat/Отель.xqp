@@ -1,0 +1,387 @@
+<objects>
+    <place x="950" y="925" n="0" value="0" name="p20" />
+    <place x="725" y="925" n="1" value="0" name="p18" />
+    <place x="275" y="1125" n="2" value="2" name="персонал" />
+    <place x="1175" y="925" n="3" value="0" name="Счёт" />
+    <place x="500" y="975" n="4" value="0" name="ключи " />
+    <place x="550" y="800" n="5" value="2" name="номера 2х" />
+    <place x="350" y="975" n="6" value="0" name="регистрация" />
+    <place x="200" y="975" n="7" value="0" name="Туристы" />
+    <place x="25" y="975" n="8" value="1" name="p28" />
+    <place x="50" y="175" n="9" value="1" name="p1" />
+    <place x="225" y="175" n="10" value="0" name="ВИП" />
+    <place x="375" y="175" n="11" value="0" name="регистрация" />
+    <place x="550" y="175" n="12" value="0" name="ключи" />
+    <place x="725" y="175" n="13" value="0" name="" />
+    <place x="925" y="175" n="14" value="0" name="p1" />
+    <place x="1125" y="175" n="15" value="0" name="счёт" />
+    <place x="300" y="325" n="16" value="1" name="персонал" />
+    <place x="525" y="25" n="17" value="1" name="номер 1й" />
+    <place x="975" y="1025" n="18" value="0" name="p11" />
+    <place x="925" y="300" n="19" value="0" name="p13" />
+    <place x="900" y="675" n="20" value="0" name="p13" />
+    <place x="900" y="550" n="21" value="0" name="p1" />
+    <place x="200" y="550" n="22" value="0" name="Командировка" />
+    <place x="350" y="550" n="23" value="0" name="регистрация" />
+    <place x="525" y="550" n="24" value="0" name="ключи" />
+    <place x="550" y="400" n="25" value="1" name="номер 1й" />
+    <place x="25" y="550" n="26" value="1" name="p1" />
+    <place x="275" y="700" n="27" value="1" name="персонал" />
+    <place x="700" y="550" n="28" value="0" name="" />
+    <place x="1100" y="550" n="29" value="0" name="счёт" />
+    <place x="300" y="425" n="30" value="0" name="p1" />
+    <place x="700" y="250" n="31" value="0" name="p2" />
+    <place x="675" y="625" n="32" value="0" name="p1" />
+    <place x="350" y="750" n="33" value="0" name="p3" />
+    <place x="650" y="1050" n="34" value="0" name="p1" />
+    <place x="50" y="325" n="35" value="1" name="p2" />
+    <place x="175" y="325" n="36" value="0" name="p3" />
+    <transition x="425" y="425" inv_change="0" distr="0" priority="1" n="0" affects_inv="0" name="t2" >
+        <distr_options value="1" />
+    </transition>
+    <arc-tp place="28" x="525" y="475" transition="0" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="30" x="375" y="450" transition="0" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="25" x="475" y="400" transition="0" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="625" y="975" inv_change="0" distr="2" priority="1" n="1" affects_inv="0" name="заселение" >
+        <distr_options m="1" sigma="1" />
+    </transition>
+    <arc-tp place="1" x="675" y="950" transition="1" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="5" x="550" y="900" transition="1" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="4" x="550" y="975" transition="1" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="425" y="800" inv_change="0" distr="0" priority="1" n="2" affects_inv="0" name="t4" >
+        <distr_options value="1" />
+    </transition>
+    <arc-tp place="1" x="575" y="850" transition="2" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="33" x="375" y="800" transition="2" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="5" x="500" y="800" transition="2" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="1075" y="925" inv_change="0" distr="2" priority="0" n="3" affects_inv="0" name="уборка" >
+        <distr_options m="2" sigma="1" />
+    </transition>
+    <arc-tp place="3" x="1125" y="925" transition="3" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="5" x="1075" y="850" transition="3" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="18" x="1050" y="975" transition="3" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="0" x="1000" y="925" transition="3" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="2" x="1075" y="1125" transition="3" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="275" y="975" inv_change="0" distr="2" priority="0" n="4" affects_inv="0" name="t1" >
+        <distr_options m="1" sigma="1" />
+    </transition>
+    <arc-tp place="6" x="300" y="975" transition="4" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="2" x="300" y="1025" transition="4" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="2" x="275" y="1050" transition="4" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="7" x="250" y="975" transition="4" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="425" y="975" inv_change="0" distr="2" priority="0" n="5" affects_inv="0" name="t2" >
+        <distr_options m="1" sigma="1" />
+    </transition>
+    <arc-tp place="4" x="450" y="975" transition="5" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="2" x="375" y="1050" transition="5" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="6" x="400" y="975" transition="5" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="2" x="350" y="1025" transition="5" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="825" y="925" inv_change="0" distr="2" priority="0" n="6" affects_inv="0" name="проживание-выезд" >
+        <distr_options m="12" sigma="5" />
+    </transition>
+    <arc-tp place="0" x="900" y="925" transition="6" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="1" x="775" y="925" transition="6" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="125" y="975" inv_change="0" distr="2" priority="0" n="7" affects_inv="0" name="t10" >
+        <distr_options m="15" sigma="5" />
+    </transition>
+    <arc-tp place="8" x="75" y="875" transition="7" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="7" x="150" y="975" transition="7" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="8" x="75" y="975" transition="7" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="150" y="175" inv_change="0" distr="2" priority="0" n="8" affects_inv="0" name="t2" >
+        <distr_options m="30" sigma="15" />
+    </transition>
+    <arc-tp place="9" x="100" y="75" transition="8" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="10" x="175" y="175" transition="8" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="9" x="100" y="175" transition="8" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="300" y="175" inv_change="0" distr="2" priority="0" n="9" affects_inv="0" name="t3" >
+        <distr_options m="1" sigma="1" />
+    </transition>
+    <arc-tp place="11" x="325" y="175" transition="9" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="16" x="325" y="250" transition="9" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="10" x="275" y="175" transition="9" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="16" x="300" y="250" transition="9" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="475" y="175" inv_change="0" distr="2" priority="0" n="10" affects_inv="0" name="t12" >
+        <distr_options m="1" sigma="1" />
+    </transition>
+    <arc-tp place="12" x="500" y="175" transition="10" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="16" x="400" y="275" transition="10" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="11" x="425" y="175" transition="10" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="16" x="400" y="250" transition="10" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="625" y="175" inv_change="0" distr="2" priority="0" n="11" affects_inv="0" name="заселение" >
+        <distr_options m="1" sigma="1" />
+    </transition>
+    <arc-tp place="13" x="675" y="175" transition="11" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="12" x="575" y="175" transition="11" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="17" x="575" y="100" transition="11" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="825" y="175" inv_change="0" distr="2" priority="0" n="12" affects_inv="0" name="проживание-выезд" >
+        <distr_options m="24" sigma="5" />
+    </transition>
+    <arc-tp place="14" x="875" y="175" transition="12" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="13" x="775" y="175" transition="12" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="1025" y="175" inv_change="0" distr="2" priority="0" n="13" affects_inv="0" name="уборка" >
+        <distr_options m="2" sigma="1" />
+    </transition>
+    <arc-tp place="15" x="1075" y="175" transition="13" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="17" x="800" y="50" transition="13" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="19" x="1000" y="250" transition="13" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="14" x="975" y="175" transition="13" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="16" x="800" y="300" transition="13" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="850" y="1025" inv_change="0" distr="2" priority="0" n="14" affects_inv="0" name="Отдых" >
+        <distr_options m="2" sigma="1" />
+    </transition>
+    <arc-tp place="2" x="750" y="1100" transition="14" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="18" x="925" y="1025" transition="14" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="700" y="350" inv_change="0" distr="2" priority="0" n="15" affects_inv="0" name="Отдых" >
+        <distr_options m="2" sigma="1" />
+    </transition>
+    <arc-tp place="16" x="500" y="350" transition="15" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="19" x="800" y="325" transition="15" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="125" y="550" inv_change="0" distr="2" priority="0" n="16" affects_inv="0" name="t2" >
+        <distr_options m="35" sigma="15" />
+    </transition>
+    <arc-tp place="22" x="150" y="550" transition="16" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="26" x="75" y="450" transition="16" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="26" x="75" y="550" transition="16" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="600" y="550" inv_change="0" distr="2" priority="0" n="17" affects_inv="0" name="заселение" >
+        <distr_options m="1" sigma="1" />
+    </transition>
+    <arc-tp place="28" x="650" y="550" transition="17" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="24" x="550" y="550" transition="17" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="25" x="550" y="450" transition="17" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="450" y="550" inv_change="0" distr="2" priority="0" n="18" affects_inv="0" name="t12" >
+        <distr_options m="1" sigma="1" />
+    </transition>
+    <arc-tp place="27" x="375" y="650" transition="18" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="24" x="475" y="550" transition="18" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="23" x="400" y="550" transition="18" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="27" x="375" y="625" transition="18" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="1000" y="550" inv_change="0" distr="2" priority="0" n="19" affects_inv="0" name="уборка" >
+        <distr_options m="2" sigma="1" />
+    </transition>
+    <arc-tp place="25" x="775" y="475" transition="19" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="20" x="975" y="625" transition="19" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="29" x="1050" y="550" transition="19" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="21" x="950" y="550" transition="19" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="27" x="775" y="675" transition="19" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="675" y="725" inv_change="0" distr="2" priority="0" n="20" affects_inv="0" name="Отдых" >
+        <distr_options m="2" sigma="1" />
+    </transition>
+    <arc-tp place="27" x="475" y="725" transition="20" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="20" x="775" y="700" transition="20" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="800" y="550" inv_change="0" distr="2" priority="0" n="21" affects_inv="0" name="проживание-выезд" >
+        <distr_options m="24" sigma="5" />
+    </transition>
+    <arc-tp place="21" x="850" y="550" transition="21" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="28" x="750" y="550" transition="21" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="275" y="550" inv_change="0" distr="2" priority="0" n="22" affects_inv="0" name="t3" >
+        <distr_options m="1" sigma="1" />
+    </transition>
+    <arc-tp place="23" x="300" y="550" transition="22" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="27" x="300" y="625" transition="22" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="22" x="250" y="550" transition="22" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="27" x="275" y="625" transition="22" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="600" y="275" inv_change="0" distr="0" priority="0" n="23" affects_inv="0" name="t1" >
+        <distr_options value="0" />
+    </transition>
+    <arc-tp place="30" x="450" y="350" transition="23" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="12" x="650" y="225" transition="23" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="31" x="650" y="275" transition="23" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="12" x="575" y="225" transition="23" distr="0" block="0" block_type="0" >
+        <distr_options value="2" />
+    </arc-pt>
+    <transition x="600" y="650" inv_change="0" distr="0" priority="0" n="24" affects_inv="0" name="t3" >
+        <distr_options value="0" />
+    </transition>
+    <arc-tp place="24" x="575" y="600" transition="24" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="32" x="625" y="650" transition="24" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="33" x="500" y="750" transition="24" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="24" x="550" y="600" transition="24" distr="0" block="0" block_type="0" >
+        <distr_options value="2" />
+    </arc-pt>
+    <transition x="550" y="1050" inv_change="0" distr="0" priority="0" n="25" affects_inv="0" name="t1" >
+        <distr_options value="0" />
+    </transition>
+    <arc-tp place="34" x="600" y="1050" transition="25" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="4" x="525" y="1025" transition="25" distr="0" block="0" block_type="0" >
+        <distr_options value="3" />
+    </arc-tp>
+    <arc-pt place="4" x="500" y="1050" transition="25" distr="0" block="0" block_type="0" >
+        <distr_options value="4" />
+    </arc-pt>
+    <transition x="100" y="325" inv_change="0" distr="3" priority="0" n="26" affects_inv="0" name="t2" >
+        <distr_options m="10000" />
+    </transition>
+    <arc-tp place="36" x="125" y="325" transition="26" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="35" x="75" y="250" transition="26" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="35" x="75" y="325" transition="26" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+</objects>

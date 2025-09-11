@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+int balls[100];
+int komb = 0;
+
+void perestanovka(int m, int n)
+{
+    if (m == n - 1)
+    {
+        bool x = false;
+        for (int i = 0; i < n; ++i)
+            if (balls[i] == i)
+            {
+                x = true;
+                break;
+            }
+        if (!x)
+            return;
+        ++komb;
+        return;
+    }
+    for (int i = m; i < n; ++i)
+    {
+        int temp = balls[i];
+        balls[i] = balls[m];
+        balls[m] = temp;
+        perestanovka(m + 1, n);
+        temp = balls[i];
+        balls[i] = balls[m];
+        balls[m] = temp;
+    }
+}
+
+int main()
+{
+    cout  << "vvod chisla sharikov:" << endl;
+    int n;
+    
+    cin >> n; if (n < 0) {
+        cout << "bruh" << endl;
+    }
+    else
+    { 
+        if (n <= 10) {
+            for (int i = 0; i < n; ++i)
+                balls[i] = i;
+            perestanovka(0, n);
+            cout << komb;
+        }
+    }
+}

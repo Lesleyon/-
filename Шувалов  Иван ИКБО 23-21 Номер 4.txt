@@ -1,0 +1,484 @@
+//4.2
+/*
+#include <iostream>
+using namespace std;
+int sign(double x)
+{
+    if (x < 0)
+        return -1;
+    if (x == 0)
+        return 0;
+    return 1;
+}
+int main()
+{
+    double x;
+    cout << "vvod chisla: " << endl;
+    cin >> x;
+    cout << "sign(x) = " << sign(x) << endl;
+    return 0;
+}
+*/
+//4.5
+/*
+#include <cmath>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int size = 100, height = 21;
+    char chart[height][size];
+    double sinx[size];
+    {
+        for (int i = 0; i < size; i++)
+            sinx[i] = 10 * tan(i / 8.0);
+
+        for (int i = 0; i < height; i++)
+            for (int j = 0; j < size; j++)
+                if (-0.01 < 10.0 - i - round(sinx[j]) && 10.0 - i - round(sinx[j]) < 0.01)
+                    chart[i][j] = '.';
+                else
+                    chart[i][j] = ' ';
+
+        for (int i = 0; i < height; i++)
+        {
+            for (int j = 0; j < size; j++)
+                cout << chart[i][j];
+            cout << endl;
+        }
+
+    }
+    cin.ignore();
+}
+//4.6
+/*
+#include <iostream>
+#include <string> 
+using namespace std;
+
+int chisla(char znak)
+{
+    switch (znak)
+    {
+    case 'I':
+        return 1;
+    case 'V':
+        return 5;
+    case 'X':
+        return 10;
+    case 'L':
+        return 50;
+    case 'C':
+        return 100;
+    case 'D':
+        return 500;
+    case 'M':
+        return 1000;
+    default:
+        return -1;
+    }
+}
+
+int dekodirovka(string rimskchsl)
+{
+    int cifri = 1;
+    int otvet = 0;
+    for (int i = 0; i < rimskchsl.length(); ++i)
+    {
+        rimskchsl[i] = toupper(rimskchsl[i]);
+        if (i != 0)
+            if (rimskchsl[i] == rimskchsl[i - 1])
+                cifri++;
+            else
+                cifri = 1;
+        if (cifri > 3)
+            return -1;
+    }
+    for (int i = 0; i < rimskchsl.length(); ++i)
+    {
+        if (chisla(rimskchsl[i]) == -1)
+            return -1;
+        if (i < rimskchsl.length() - 1)
+        {
+            if (chisla(rimskchsl[i]) >= chisla(rimskchsl[i + 1]))
+                otvet += chisla(rimskchsl[i]);
+            else
+            {
+                otvet += chisla(rimskchsl[i + 1]) - chisla(rimskchsl[i]);
+                ++i;
+            }
+        }
+        else otvet += chisla(rimskchsl[i]);
+    }
+    return otvet;
+}
+
+int main()
+{
+    cout << "Vvod rimanskih chisel: "  << endl; //bruh
+    string chislo;
+    cin >> chislo;
+    int arabski;
+    arabski = dekodirovka(chislo);
+    if (arabski == -1)
+        cout << "oshibka vvoda" << endl;
+    else
+        cout << "Rezultat " << arabski << endl;
+}*/
+/*
+#include <iostream>
+#include <stdlib.h>
+#include <math.h>
+#include <fstream>
+#include <string>
+using namespace std;
+int main() {
+ ifstream fin("C:/Users/mirea/Desktop/XD.txt");
+ string a;
+ getline(fin, a);
+ fin >> a;
+ cout << a << endl;
+ fin.close();
+}
+*/
+/*
+#include <iostream>
+#include <stdlib.h>
+#include <math.h>
+#include <fstream>
+#include <string>
+using namespace std;
+int main() {
+    string str, sorted_str = "";
+    cin >> str;
+    while (str.length()) {
+        bool capital = false, cp = false;
+        int min = 500;
+        int index = 0;
+        char ch;
+        for (unsigned int i = 0; i < str.length(); i++) {
+            int k = (int)str[i];
+            if (k < 97) {
+                k += 32;
+                cp = true;
+            }
+            else
+                cp = false;
+            if (k < min || (k == min && (cp && !capital))) {
+                min = k;
+                index = i;
+                ch = str[i];
+                capital = false;
+                if (cp)
+                    capital = true;
+            }
+        }
+        str.erase(str.begin() + index);
+        sorted_str += ch;
+    }
+   cout << sorted_str;
+    return 0;
+}*/
+/*
+#include <iostream>
+#include <stdlib.h>
+#include <math.h>
+#include <fstream>
+#include <string>
+#include <iomanip>
+using namespace std;
+int main() {
+    for (int i = 0; i < 13; ++i)
+    {
+        if (i < 7) {
+            if (0 == i % 2) {
+                for (int j = 0; j < 4; ++j)
+                {
+                    cout << "  *";
+                }
+                cout.width(60);
+                cout << setw(60) << setfill('/');
+            }
+            else {
+                cout << " ";
+                for (int j = 0; j < 4; ++j)
+                    cout << "*  ";
+            }
+            cout << '\n';
+        }
+    }
+ 
+for (int i = 0; i < 18; ++i) {
+    if (0 == i % 2)
+    {
+        cout << setw(72) << setfill(' ') << '\n';
+    }
+    else
+    {
+        cout << setw(72) << setfill('/') << '\n';
+    }
+}
+}*/
+
+/*
+#include <iostream>
+#include <stdlib.h>
+#include <math.h>
+#include <fstream>
+#include <string>
+#include <iomanip>
+using namespace std;
+int main() {
+    int i;
+    char txt[1000] = {};
+    ofstream fin("C:/Users/mirea/Desktop/XD.txt");
+    cin.getline(txt, 1000);
+    fin << txt;
+    fin.close();
+    ifstream file2("C:/Users/mirea/Desktop/XD.txt");
+    for (i = 0; i < 1000; i++) {
+        if (isdigit(txt[i])) {
+            cout << txt[i] << "";
+        }
+       
+    }
+}
+*/
+#include <iostream>
+#include <stdlib.h>
+#include <math.h>
+#include <fstream>
+#include <string>
+#include <iomanip>
+using namespace std;
+    int XD1() {
+        double a, b, S;
+        cin >> a;
+        cin >> b;
+        if ((a > 0) &&(b > 0)) {
+        S = a * b;
+        cout << S << "Ploshad' Pryamougol'nika";
+        return S;
+        }
+        else {
+           
+            cout  << "nevozmojno";
+        }
+       
+    }
+    int XD2() {
+        double a, h, S;
+        cin >> a;
+        cin >> h;
+        if ((a>0)&&(h>0)){
+            S = a * h / 2;
+        cout << S << "Ploschad' Treugol'nika";
+        return S;
+    }
+        else {
+            cout << "nevozmojno";
+        }
+    }
+    int XD3() {
+        double  R, S;
+        const double p = 3.141592653589793;
+        cin >> R;
+        if (R > -1) {
+        S = p * pow(R, 2);
+            cout << S << "Ploschad' Kruga";
+            return S;
+    }
+        else {
+            cout << "nevozmojno";
+        }
+    }
+    int main() {
+        int S1 = XD1();
+        int S2 = XD2();
+        int S3 = XD3();
+    }
+
+    /*
+    int a();
+    void b() {
+    }
+    int main() {
+        int c = a();
+        b();
+    }
+    int a() {
+    }
+   
+/*
+#include <iostream>
+#include <stdlib.h>
+#include <math.h>
+#include <fstream>
+#include <string>
+#include <iomanip>
+using namespace std;
+int main() {
+    double x;
+    cin >> x;
+    int a1 = a();
+    int b1 = b();
+    int
+}
+    int a() {
+        cin >> x
+            if x > 0 {
+                cout << 1;
+                return 1;
+            }
+    }
+}
+int b() {
+    if
+}
+*/
+/*
+#include <iostream>
+#include <clocale>
+using namespace std;
+int main() {
+    int arr1[3][4];
+    float arr2[4][2];
+    float arr3[3][2];
+    for (int i = 0; i < 3; i++) {
+        cout << "Vvedite 4 chisla" << endl;
+        for (int j = 0; j < 4; j++) {
+            
+            cin >> arr1[i][j];
+        }
+    }
+    for (int q = 0; q < 4; q++) {
+        cout << "vvedite 2 chisla" << endl;
+        for (int w = 0; w < 2; w++) {
+            cin >> arr2[q][w];
+        }
+    }
+
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 2; j++) {
+            arr3[i][j] = 0;
+        }
+    }
+
+    for (int x = 0; x < 3; x++) {
+        for (int y = 0; y < 2; y++) {
+            for (int p = 0; p < 4; p++) {
+                arr3[x][y] += (arr1[x][p] * arr2[p][y]);
+            }
+        }
+    }
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 2; j++) {
+            cout << arr3[i][j] << " ";
+        }
+        cout << endl;
+    }
+    double max = -1, min = 1e10, maxi = -1, mini = 1e10;
+
+    for (int i = 0; i < 3; ++i) 
+    {
+        if (arr3[i][0] > max) { max = arr3[i][0]; maxi = i + 1; }  
+        if (arr3[i][0] < min) { min = arr3[i][0]; mini = i + 1; }
+    }
+    cout << "maxs pribil poluchil prodavec: " << maxi << "minimal;nuyu: " << mini << endl;
+    max = -1, min = 1e10, maxi = -1, mini = 1e10;
+    for (int i = 0; i < 3; ++i) {
+        if (arr3[i][1] > max) { max = arr3[i][1]; maxi = i + 1; }   
+        if (arr3[i][1] < min) { min = arr3[i][1]; mini = i + 1; }
+    }
+    cout << "Maksimal'nie Kommisionie prodavec nomer:" << maxi << ", Minimal'nie: " << mini << endl;
+
+    double sum = 0;
+
+    for (int i = 0; i < 3; ++i) {
+
+        sum += (arr3[i][0] - arr3[i][1]); 
+
+    }
+
+    cout << "Obshaya summa pribili: " << sum << endl;
+
+    sum = 0;
+
+    for (int i = 0; i < 3; ++i) {
+
+        sum += arr3[i][1];     
+    }
+
+    cout << "Summa Kommisionih: " << sum << endl;
+
+    sum = 0;
+
+    for (int i = 0; i < 3; ++i) {
+
+        sum += arr3[i][0];      
+
+    }
+
+    cout << "Cumma zarabotanih deneg: " << sum << endl;
+} */
+/*#include <iostream>
+ /*#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+using namespace std;
+int main()
+{
+ int i;
+ float s, s1;
+ char numb[30];
+ ofstream fout("kok.txt");
+ cout << "vvod chisel" << endl;
+ cin.getline(numb, 30);
+ fout << numb;
+ fout.close();
+ ifstream fin("kok.txt");
+ s = 0;
+ if (!fin.is_open()) {
+  cout << " Oshibka faila" << endl;
+ }
+ else {
+  while (fin >> s1) {
+   s += s1;
+  }
+ 
+ }
+ cout << "summa" << s << endl;
+  */
+#include <iostream>
+#include <algorithm>
+#include <math.h>
+#include <cmath>
+#include <stdlib.h>
+using namespace std;
+int main()
+{
+ int m, b, c, si, s1;
+ cin >> m;
+ cin >> b;
+ cin >> c;
+ si = 0;
+ if ((m == 37) && (b == 3) && (c == 64)) {
+  for (si < s1; ; si++) {
+   s1 = (m * si + b) % c;
+   cout << ' ' << s1 << ' ';
+  }
+ }
+ else {
+  if ((m == 25173) && (b == 13849) && (c == 65537)) {
+   for (si < s1; ; si++) {
+    s1 = (m * si + b) % c;
+    cout << ' ' << s1 << ' ';
+   }
+  }
+  else {
+   cout << "oshibka vvoda";
+  }
+ }
+}
