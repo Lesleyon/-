@@ -1,0 +1,214 @@
+<objects>
+    <place x="950" y="150" n="0" value="0" name="Катающийся"/>
+    <place x="225" y="150" n="1" value="0" name="Уточнение запроса (без коньков)"/>
+    <place x="475" y="225" n="2" value="0" name="Недождавшиеся"/>
+    <place x="100" y="225" n="3" value="0" name="Недождавшиеся"/>
+    <place x="600" y="150" n="4" value="0" name="Стол сотрудника ("/>
+    <place x="1225" y="150" n="5" value="0" name="Ушедшие"/>
+    <place x="950" y="25" n="6" value="5" name="Запас Коньков"/>
+    <place x="950" y="275" n="7" value="15" name="Свободные места"/>
+    <place x="475" y="550" n="8" value="0" name="Недождавшиеся"/>
+    <place x="1225" y="475" n="9" value="0" name="Ушедшие"/>
+    <place x="100" y="550" n="10" value="0" name="Недождавшиеся"/>
+    <place x="950" y="475" n="11" value="0" name="Катающийся"/>
+    <place x="225" y="475" n="12" value="0" name="Уточнение запроса (с коньками)"/>
+    <place x="600" y="475" n="13" value="0" name="Стол сотрудника ("/>
+    <place x="600" y="325" n="14" value="4" name="Сотрудники"/>
+    <place x="125" y="300" n="15" value="0" name="Болезнь"/>
+    <place x="325" y="400" n="16" value="0" name="СчНС2"/>
+    <place x="200" y="400" n="17" value="0" name="Флаг НС2"/>
+    <place x="225" y="700" n="18" value="0" name="СчНС1"/>
+    <transition x="125" y="400" distr="0" priority="1" n="0" name="На больничный">
+        <distr_options value="0"/>
+    </transition>
+    <arc-tp place="15" x="75" y="375" transition="0" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-pt place="17" x="175" y="400" transition="0" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <arc-pt place="14" x="175" y="350" transition="0" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <transition x="25" y="150" distr="2" priority="0" n="1" name="Приход на каток">
+        <distr_options m="10" sigma="2"/>
+    </transition>
+    <arc-tp place="1" x="100" y="150" transition="1" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <transition x="225" y="225" distr="0" priority="0" n="2" name="Уход не покатавшись">
+        <distr_options value="0"/>
+    </transition>
+    <arc-tp place="3" x="150" y="225" transition="2" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-tp place="1" x="275" y="200" transition="2" distr="0" block="0" block_type="0">
+        <distr_options value="8"/>
+    </arc-tp>
+    <arc-pt place="1" x="175" y="200" transition="2" distr="0" block="0" block_type="0">
+        <distr_options value="9"/>
+    </arc-pt>
+    <transition x="750" y="150" distr="2" priority="0" n="3" name="Начало катания">
+        <distr_options m="2" sigma="1"/>
+    </transition>
+    <arc-tp place="0" x="850" y="150" transition="3" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-tp place="14" x="775" y="275" transition="3" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-pt place="4" x="675" y="150" transition="3" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <arc-pt place="6" x="825" y="25" transition="3" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <arc-pt place="7" x="825" y="275" transition="3" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <transition x="600" y="225" distr="0" priority="0" n="4" name="Уход не покатавшись">
+        <distr_options value="0"/>
+    </transition>
+    <arc-tp place="4" x="650" y="200" transition="4" distr="0" block="0" block_type="0">
+        <distr_options value="10"/>
+    </arc-tp>
+    <arc-tp place="2" x="525" y="225" transition="4" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-pt place="4" x="550" y="200" transition="4" distr="0" block="0" block_type="0">
+        <distr_options value="11"/>
+    </arc-pt>
+    <transition x="425" y="150" distr="2" priority="0" n="5" name="Переход к кассе">
+        <distr_options m="2" sigma="1"/>
+    </transition>
+    <arc-tp place="4" x="500" y="150" transition="5" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-pt place="1" x="325" y="150" transition="5" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <arc-pt place="14" x="425" y="275" transition="5" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <transition x="1075" y="150" distr="2" priority="0" n="6" name="Выход с катка">
+        <distr_options m="8" sigma="2"/>
+    </transition>
+    <arc-tp place="5" x="1150" y="150" transition="6" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-tp place="6" x="1050" y="25" transition="6" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-tp place="7" x="1050" y="275" transition="6" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-pt place="0" x="1025" y="150" transition="6" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <transition x="225" y="550" distr="0" priority="0" n="7" name="Уход не покатавшись">
+        <distr_options value="0"/>
+    </transition>
+    <arc-tp place="10" x="150" y="550" transition="7" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-tp place="12" x="275" y="525" transition="7" distr="0" block="0" block_type="0">
+        <distr_options value="8"/>
+    </arc-tp>
+    <arc-pt place="12" x="175" y="525" transition="7" distr="0" block="0" block_type="0">
+        <distr_options value="9"/>
+    </arc-pt>
+    <transition x="425" y="475" distr="2" priority="0" n="8" name="Переход к кассе">
+        <distr_options m="2" sigma="1"/>
+    </transition>
+    <arc-tp place="13" x="500" y="475" transition="8" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-pt place="12" x="325" y="475" transition="8" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <arc-pt place="14" x="425" y="375" transition="8" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <transition x="25" y="475" distr="2" priority="0" n="9" name="Приход на каток">
+        <distr_options m="10" sigma="2"/>
+    </transition>
+    <arc-tp place="12" x="100" y="475" transition="9" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <transition x="775" y="475" distr="2" priority="0" n="10" name="Начало катания">
+        <distr_options m="2" sigma="1"/>
+    </transition>
+    <arc-tp place="11" x="850" y="475" transition="10" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-tp place="14" x="775" y="375" transition="10" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-pt place="13" x="675" y="475" transition="10" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <arc-pt place="7" x="825" y="350" transition="10" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <transition x="1100" y="475" distr="2" priority="0" n="11" name="Выход с катка">
+        <distr_options m="8" sigma="2"/>
+    </transition>
+    <arc-tp place="9" x="1150" y="475" transition="11" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-tp place="7" x="1100" y="375" transition="11" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-pt place="11" x="1025" y="475" transition="11" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <transition x="600" y="550" distr="0" priority="0" n="12" name="Уход не покатавшись">
+        <distr_options value="0"/>
+    </transition>
+    <arc-tp place="8" x="525" y="550" transition="12" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-tp place="13" x="650" y="525" transition="12" distr="0" block="0" block_type="0">
+        <distr_options value="10"/>
+    </arc-tp>
+    <arc-pt place="13" x="550" y="525" transition="12" distr="0" block="0" block_type="0">
+        <distr_options value="11"/>
+    </arc-pt>
+    <transition x="225" y="300" distr="0" priority="0" n="13" name="Лечение">
+        <distr_options value="100"/>
+    </transition>
+    <arc-tp place="14" x="400" y="300" transition="13" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-pt place="15" x="175" y="300" transition="13" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-pt>
+    <transition x="275" y="400" distr="3" priority="0" n="14" name="НС2">
+        <distr_options m="300"/>
+    </transition>
+    <arc-tp place="17" x="250" y="400" transition="14" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-tp place="16" x="325" y="400" transition="14" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <transition x="25" y="700" distr="3" priority="0" n="15" name="СчНС1">
+        <distr_options m="1000"/>
+    </transition>
+    <arc-tp place="18" x="150" y="700" transition="15" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <arc-tp place="12" x="25" y="550" transition="15" distr="0" block="0" block_type="0">
+        <distr_options value="1"/>
+    </arc-tp>
+    <transition x="1300" y="550" distr="0" priority="0" n="16" name="t1">
+        <distr_options value="0"/>
+    </transition>
+    <transition x="1275" y="175" distr="0" priority="0" n="17" name="t2">
+        <distr_options value="0"/>
+    </transition>
+</objects>
+<format_version major="1" minor="2"/>
+<global_options>
+    <transitions nonHolding="0"/>
+</global_options>

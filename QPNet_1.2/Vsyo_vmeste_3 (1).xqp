@@ -1,0 +1,347 @@
+<objects>
+    <invariant gt_event_value="5000" gt_event_type="1" lt_event_value="2000" name="Студенты" svalue="3000" lt_event_type="2" />
+    <place x="250" y="25" n="0" value="0" name="Уточнение запроса (справка)" />
+    <place x="625" y="25" n="1" value="0" name="Стол сотрудника (справка)" />
+    <place x="950" y="200" n="2" value="200" name="Листы бумаги" />
+    <place x="950" y="300" n="3" value="6000" name="Чернила" />
+    <place x="625" y="200" n="4" value="0" name="Кол-во перезаполнений бумагой" />
+    <place x="600" y="300" n="5" value="0" name="Кол-во перезаполнений чернилами" />
+    <place x="975" y="25" n="6" value="0" name="Ушедшие" />
+    <place x="475" y="100" n="7" value="0" name="Недождавшиеся" />
+    <place x="975" y="600" n="8" value="0" name="Кол-во перезарядок телефона" />
+    <place x="250" y="700" n="9" value="0" name="Уточнение запроса (без допуска)" />
+    <place x="1400" y="700" n="10" value="0" name="Ушедшие" />
+    <place x="900" y="800" n="11" value="0" name="Недождавшиеся" />
+    <place x="625" y="700" n="12" value="0" name="Стол сотрудника" />
+    <place x="1050" y="700" n="13" value="0" name="Стол сотрудника (без допуска)" />
+    <place x="1275" y="600" n="14" value="100" name="Заряд телефона" />
+    <place x="250" y="400" n="15" value="0" name="Уточнение запроса (с допуском)" />
+    <place x="600" y="400" n="16" value="0" name="Стол сотрудника" />
+    <place x="1025" y="400" n="17" value="0" name="Стол сотрудника (с допуском)" />
+    <place x="1400" y="400" n="18" value="0" name="Ушедшие" />
+    <place x="1200" y="500" n="19" value="0" name="Недождавшиеся" />
+    <place x="1100" y="250" n="20" value="1" name="Принтер" />
+    <place x="450" y="225" n="21" value="6" name="Сотрудники" />
+    <place x="100" y="100" n="22" value="0" name="Недождавшиеся" />
+    <place x="75" y="475" n="23" value="0" name="Недождавшиеся" />
+    <place x="100" y="800" n="24" value="0" name="Недождавшиеся" />
+    <place x="100" y="625" n="25" value="0" name="СчНС1" />
+    <place x="1175" y="75" n="26" value="0" name="СчНС2" />
+    <place x="175" y="325" n="27" value="0" name="Флаг НС4" />
+    <place x="350" y="325" n="28" value="0" name="СчНС4" />
+    <place x="75" y="200" n="29" value="0" name="Болезнь" />
+    <place x="700" y="550" n="30" value="0" name="Флаг НС3" />
+    <place x="550" y="550" n="31" value="0" name="СчНС3" />
+    <transition x="75" y="300" inv_change="0" distr="0" priority="1" n="0" affects_inv="0" name="На больничный" >
+        <distr_options value="0" />
+    </transition>
+    <arc-tp place="29" x="25" y="275" transition="0" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="27" x="125" y="300" transition="0" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="21" x="250" y="250" transition="0" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="875" y="525" inv_change="0" distr="2" priority="1" n="1" affects_inv="0" name="Долгий поиск в списке должников" >
+        <distr_options m="15" sigma="3" />
+    </transition>
+    <arc-tp place="17" x="950" y="475" transition="1" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="30" x="750" y="525" transition="1" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="16" x="675" y="475" transition="1" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="450" y="400" inv_change="0" distr="2" priority="0" n="2" affects_inv="0" name="Переход к столу" >
+        <distr_options m="2" sigma="1" />
+    </transition>
+    <arc-tp place="16" x="525" y="400" transition="2" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="15" x="350" y="400" transition="2" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="21" x="450" y="325" transition="2" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="50" y="25" inv_change="0" distr="2" priority="0" n="3" affects_inv="0" name="Приход в деканат" >
+        <distr_options m="10" sigma="2" />
+    </transition>
+    <arc-tp place="0" x="125" y="25" transition="3" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <transition x="450" y="25" inv_change="0" distr="2" priority="0" n="4" affects_inv="0" name="Переход к столу" >
+        <distr_options m="2" sigma="1" />
+    </transition>
+    <arc-tp place="1" x="525" y="25" transition="4" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="0" x="350" y="25" transition="4" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="21" x="350" y="125" transition="4" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="800" y="25" inv_change="1" distr="1" priority="0" n="5" affects_inv="1" name="Печать справки" >
+        <distr_options min="2" max="3" />
+    </transition>
+    <arc-tp place="6" x="875" y="25" transition="5" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="20" x="1100" y="175" transition="5" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="21" x="675" y="150" transition="5" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="1" x="700" y="25" transition="5" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="2" x="825" y="200" transition="5" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="3" x="750" y="225" transition="5" distr="2" block="0" block_type="0" >
+        <distr_options m="200" sigma="22" />
+    </arc-pt>
+    <arc-pt place="20" x="925" y="125" transition="5" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="825" y="300" inv_change="0" distr="2" priority="0" n="6" affects_inv="0" name="Заполнение чернил" >
+        <distr_options m="15" sigma="2" />
+    </transition>
+    <arc-tp place="3" x="875" y="300" transition="6" distr="2" block="3000" block_type="2" >
+        <distr_options m="5000" sigma="80" />
+    </arc-tp>
+    <arc-tp place="5" x="725" y="300" transition="6" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <transition x="825" y="200" inv_change="0" distr="2" priority="0" n="7" affects_inv="0" name="Доставка бумаги" >
+        <distr_options m="16" sigma="3" />
+    </transition>
+    <arc-tp place="2" x="875" y="200" transition="7" distr="0" block="50" block_type="2" >
+        <distr_options value="100" />
+    </arc-tp>
+    <arc-tp place="4" x="725" y="200" transition="7" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <transition x="625" y="100" inv_change="-1" distr="0" priority="0" n="8" affects_inv="1" name="Уход без справки" >
+        <distr_options value="0" />
+    </transition>
+    <arc-tp place="1" x="675" y="100" transition="8" distr="0" block="0" block_type="0" >
+        <distr_options value="10" />
+    </arc-tp>
+    <arc-tp place="7" x="550" y="125" transition="8" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="21" x="450" y="175" transition="8" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="1" x="575" y="100" transition="8" distr="0" block="0" block_type="0" >
+        <distr_options value="11" />
+    </arc-pt>
+    <transition x="25" y="700" inv_change="0" distr="2" priority="0" n="9" affects_inv="0" name="Приход в деканат" >
+        <distr_options m="10" sigma="2" />
+    </transition>
+    <arc-tp place="9" x="125" y="700" transition="9" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <transition x="1275" y="700" inv_change="1" distr="1" priority="0" n="10" affects_inv="1" name="Звонок преподавателю" >
+        <distr_options min="5" max="8" />
+    </transition>
+    <arc-tp place="10" x="1350" y="700" transition="10" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="21" x="500" y="600" transition="10" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="14" x="1325" y="600" transition="10" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="13" x="1175" y="700" transition="10" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="1050" y="800" inv_change="-1" distr="0" priority="0" n="11" affects_inv="1" name="Уход из очереди" >
+        <distr_options value="0" />
+    </transition>
+    <arc-tp place="11" x="975" y="800" transition="11" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="13" x="1100" y="775" transition="11" distr="0" block="0" block_type="0" >
+        <distr_options value="10" />
+    </arc-tp>
+    <arc-tp place="21" x="575" y="325" transition="11" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="13" x="1000" y="775" transition="11" distr="0" block="0" block_type="0" >
+        <distr_options value="11" />
+    </arc-pt>
+    <transition x="450" y="700" inv_change="0" distr="2" priority="0" n="12" affects_inv="0" name="Переход к столу" >
+        <distr_options m="2" sigma="1" />
+    </transition>
+    <arc-tp place="12" x="525" y="700" transition="12" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="9" x="350" y="700" transition="12" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="21" x="400" y="350" transition="12" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="800" y="700" inv_change="0" distr="2" priority="0" n="13" affects_inv="0" name="Поиск в списке должников" >
+        <distr_options m="7" sigma="2" />
+    </transition>
+    <arc-tp place="13" x="925" y="700" transition="13" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="12" x="725" y="700" transition="13" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="1175" y="600" inv_change="0" distr="2" priority="0" n="14" affects_inv="0" name="Зарядка телефона" >
+        <distr_options m="100" sigma="15" />
+    </transition>
+    <arc-tp place="14" x="1200" y="600" transition="14" distr="0" block="10" block_type="2" >
+        <distr_options value="90" />
+    </arc-tp>
+    <arc-tp place="8" x="1100" y="600" transition="14" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <transition x="1250" y="400" inv_change="1" distr="1" priority="0" n="15" affects_inv="1" name="Печать направления" >
+        <distr_options min="2" max="3" />
+    </transition>
+    <arc-tp place="18" x="1325" y="400" transition="15" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="20" x="1100" y="325" transition="15" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="21" x="500" y="350" transition="15" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="17" x="1150" y="400" transition="15" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="3" x="1200" y="300" transition="15" distr="2" block="0" block_type="0" >
+        <distr_options m="200" sigma="22" />
+    </arc-pt>
+    <arc-pt place="2" x="1250" y="200" transition="15" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <arc-pt place="20" x="1225" y="275" transition="15" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="800" y="400" inv_change="0" distr="2" priority="0" n="16" affects_inv="0" name="Поиск в списке должников" >
+        <distr_options m="7" sigma="2" />
+    </transition>
+    <arc-tp place="17" x="900" y="400" transition="16" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="16" x="700" y="400" transition="16" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="25" y="400" inv_change="0" distr="2" priority="0" n="17" affects_inv="0" name="Приход в деканат" >
+        <distr_options m="10" sigma="2" />
+    </transition>
+    <arc-tp place="15" x="125" y="400" transition="17" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <transition x="1025" y="500" inv_change="-1" distr="0" priority="0" n="18" affects_inv="1" name="Уход без направления" >
+        <distr_options value="0" />
+    </transition>
+    <arc-tp place="19" x="1100" y="500" transition="18" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="17" x="1075" y="475" transition="18" distr="0" block="0" block_type="0" >
+        <distr_options value="10" />
+    </arc-tp>
+    <arc-tp place="21" x="650" y="500" transition="18" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="17" x="975" y="475" transition="18" distr="0" block="0" block_type="0" >
+        <distr_options value="11" />
+    </arc-pt>
+    <transition x="250" y="100" inv_change="-1" distr="0" priority="0" n="19" affects_inv="1" name="Уход без справки" >
+        <distr_options value="0" />
+    </transition>
+    <arc-tp place="0" x="300" y="75" transition="19" distr="0" block="0" block_type="0" >
+        <distr_options value="8" />
+    </arc-tp>
+    <arc-tp place="22" x="175" y="100" transition="19" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="0" x="200" y="75" transition="19" distr="0" block="0" block_type="0" >
+        <distr_options value="9" />
+    </arc-pt>
+    <transition x="250" y="475" inv_change="-1" distr="0" priority="0" n="20" affects_inv="1" name="Уход без направления" >
+        <distr_options value="0" />
+    </transition>
+    <arc-tp place="15" x="300" y="450" transition="20" distr="0" block="0" block_type="0" >
+        <distr_options value="8" />
+    </arc-tp>
+    <arc-tp place="23" x="175" y="475" transition="20" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="15" x="200" y="450" transition="20" distr="0" block="0" block_type="0" >
+        <distr_options value="9" />
+    </arc-pt>
+    <transition x="250" y="800" inv_change="-1" distr="0" priority="0" n="21" affects_inv="1" name="Уход из очереди" >
+        <distr_options value="0" />
+    </transition>
+    <arc-tp place="9" x="300" y="775" transition="21" distr="0" block="0" block_type="0" >
+        <distr_options value="8" />
+    </arc-tp>
+    <arc-tp place="24" x="175" y="800" transition="21" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="9" x="200" y="775" transition="21" distr="0" block="0" block_type="0" >
+        <distr_options value="9" />
+    </arc-pt>
+    <transition x="200" y="625" inv_change="0" distr="3" priority="0" n="22" affects_inv="0" name="СчНС1" >
+        <distr_options m="2000" />
+    </transition>
+    <arc-tp place="25" x="150" y="625" transition="22" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="9" x="250" y="625" transition="22" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <transition x="1075" y="75" inv_change="0" distr="3" priority="0" n="23" affects_inv="0" name="НС2" >
+        <distr_options m="1000" />
+    </transition>
+    <arc-tp place="26" x="1125" y="75" transition="23" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="3" x="1025" y="75" transition="23" distr="2" block="0" block_type="0" >
+        <distr_options m="50" sigma="5" />
+    </arc-pt>
+    <transition x="275" y="325" inv_change="0" distr="3" priority="0" n="24" affects_inv="0" name="НС4" >
+        <distr_options m="300" />
+    </transition>
+    <arc-tp place="28" x="300" y="325" transition="24" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="27" x="225" y="325" transition="24" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <transition x="175" y="200" inv_change="0" distr="0" priority="0" n="25" affects_inv="0" name="Лечение" >
+        <distr_options value="100" />
+    </transition>
+    <arc-tp place="21" x="300" y="200" transition="25" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="29" x="125" y="200" transition="25" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="625" y="550" inv_change="0" distr="3" priority="0" n="26" affects_inv="0" name="НС3" >
+        <distr_options m="120" />
+    </transition>
+    <arc-tp place="30" x="650" y="550" transition="26" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="31" x="600" y="550" transition="26" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+</objects>

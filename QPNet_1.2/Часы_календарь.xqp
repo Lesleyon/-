@@ -1,0 +1,70 @@
+<objects>
+    <place x="100" y="100" n="0" value="1" name="p1" />
+    <place x="250" y="100" n="1" value="0" name="p2" />
+    <place x="425" y="100" n="2" value="0" name="p3" />
+    <place x="575" y="100" n="3" value="0" name="p4" />
+    <place x="725" y="100" n="4" value="0" name="p5" />
+    <place x="875" y="100" n="5" value="0" name="p6" />
+    <place x="175" y="250" n="6" value="0" name="p1" />
+    <place x="1025" y="100" n="7" value="0" name="p2" />
+    <transition x="175" y="100" inv_change="0" distr="0" priority="0" n="0" affects_inv="0" name="Тик" >
+        <distr_options value="1" />
+    </transition>
+    <arc-tp place="1" x="200" y="100" transition="0" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="0" x="125" y="25" transition="0" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-tp place="6" x="175" y="175" transition="0" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="0" x="125" y="100" transition="0" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-pt>
+    <transition x="350" y="100" inv_change="0" distr="0" priority="0" n="1" affects_inv="0" name="Минута" >
+        <distr_options value="0" />
+    </transition>
+    <arc-tp place="2" x="375" y="100" transition="1" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="1" x="300" y="100" transition="1" distr="0" block="0" block_type="0" >
+        <distr_options value="60" />
+    </arc-pt>
+    <transition x="500" y="100" inv_change="0" distr="0" priority="0" n="2" affects_inv="0" name="Час" >
+        <distr_options value="0" />
+    </transition>
+    <arc-tp place="3" x="525" y="100" transition="2" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="2" x="475" y="100" transition="2" distr="0" block="0" block_type="0" >
+        <distr_options value="60" />
+    </arc-pt>
+    <transition x="650" y="100" inv_change="0" distr="0" priority="0" n="3" affects_inv="0" name="Сутки" >
+        <distr_options value="0" />
+    </transition>
+    <arc-tp place="4" x="675" y="100" transition="3" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="3" x="625" y="100" transition="3" distr="0" block="0" block_type="0" >
+        <distr_options value="24" />
+    </arc-pt>
+    <transition x="800" y="100" inv_change="0" distr="0" priority="0" n="4" affects_inv="0" name="Месяц" >
+        <distr_options value="0" />
+    </transition>
+    <arc-tp place="5" x="825" y="100" transition="4" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="4" x="775" y="100" transition="4" distr="0" block="0" block_type="0" >
+        <distr_options value="30" />
+    </arc-pt>
+    <transition x="950" y="100" inv_change="0" distr="0" priority="0" n="5" affects_inv="0" name="t1" >
+        <distr_options value="0" />
+    </transition>
+    <arc-tp place="7" x="975" y="100" transition="5" distr="0" block="0" block_type="0" >
+        <distr_options value="1" />
+    </arc-tp>
+    <arc-pt place="5" x="925" y="100" transition="5" distr="0" block="0" block_type="0" >
+        <distr_options value="12" />
+    </arc-pt>
+</objects>
